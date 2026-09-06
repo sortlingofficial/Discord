@@ -15,7 +15,7 @@ logger = logging.getLogger("sorts-cli")
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Sorts.me V1 Command Line Interface. Manage university seeding, crawling, and matching."
+        description="Sortling V1 Command Line Interface. Manage university seeding, crawling, and matching."
     )
     subparsers = parser.add_subparsers(dest="command", help="Sub-commands")
 

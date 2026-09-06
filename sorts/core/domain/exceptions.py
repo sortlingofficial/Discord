@@ -1,5 +1,5 @@
 class DomainException(Exception):
-    """Base domain exception for Sorts.me."""
+    """Base domain exception for Sortling."""
     pass
 
 class UniversityNotFoundException(DomainException):

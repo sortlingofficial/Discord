@@ -1,7 +1,7 @@
 [project]
 name = "sorts-me"
 version = "0.1.0"
-description = "Sorts.me V1 - Adaptive Campus Guide"
+description = "Sortling V1 - Adaptive Campus Guide"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

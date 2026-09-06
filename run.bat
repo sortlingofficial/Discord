@@ -1,7 +1,7 @@
 @echo off
 title Sortling Discord Bot launcher
 echo ============================================================
-echo   STARTING SORTLING DISCORD BOT (sorts.me V1)
+echo   STARTING SORTLING DISCORD BOT (Sortling V1)
 echo ============================================================
 echo.
 

@@ -269,7 +269,7 @@ TERMS_HTML = f"""<!DOCTYPE html>
     <div class="container">
         <div class="brand-header">
             <div class="brand-icon">
-                <img src="https://raw.githubusercontent.com/keepsloading/sorts.me/main/Sortling%20Mascot/Icon_Neutral.png" alt="Sortling Mascot">
+                <img src="https://raw.githubusercontent.com/sorts-me/Discord/main/Sortling%20Mascot/Icon_Neutral.png" alt="Sortling Mascot">
             </div>
             <div class="brand-title-group">
                 <div class="brand-name">Sortling <span class="discord-badge">APP</span></div>
@@ -329,7 +329,7 @@ PRIVACY_HTML = f"""<!DOCTYPE html>
     <div class="container">
         <div class="brand-header">
             <div class="brand-icon">
-                <img src="https://raw.githubusercontent.com/keepsloading/sorts.me/main/Sortling%20Mascot/Icon_Neutral.png" alt="Sortling Mascot">
+                <img src="https://raw.githubusercontent.com/sorts-me/Discord/main/Sortling%20Mascot/Icon_Neutral.png" alt="Sortling Mascot">
             </div>
             <div class="brand-title-group">
                 <div class="brand-name">Sortling <span class="discord-badge">APP</span></div>

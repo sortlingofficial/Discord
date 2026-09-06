@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 MASCOT_DIR = "Sortling Mascot"
 
-# Standard Brand Color for sorts.me (#000543)
+# Standard Brand Color for Sortling (#000543)
 BRAND_COLOR = nextcord.Color(0x000543)
 
 def clean_text(text: Optional[str]) -> str:
