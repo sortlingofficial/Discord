@@ -27,26 +27,52 @@ To scale, the platform needed to evolve beyond a bot into a centralized web plat
 
 ## Solution
 
-**Sortling** is a single, unified campus platform designed to connect students and clubs seamlessly. It replaces chaotic email chains and scattered forms with an intelligent, all-in-one ecosystem:
+**Sortling** is a unified two-sided platform designed to connect students and clubs seamlessly through dedicated onboarding journeys, intelligent trait-vector matching, and an autonomous maintenance model.
 
-### 1. Interactive "Sorting Hat" Recommendation Engine
-- Acts as a digital sorting hat: prompts students with adaptive questions about their passions, interests, skills, and time availability.
-- Evaluates student responses dynamically against a mathematical decision-tree model and vector-trait scoring to recommend the most suitable clubs with personalized fit explanations.
+---
 
-### 2. Pre-Uploaded & Verified Club Profiles
-- Club departments pre-upload comprehensive profiles with verified information: domain specializations, executive leadership contacts, meeting schedules, past project portfolios, and recruitment criteria.
-- Students can browse, filter, and inspect verified clubs in seconds instead of hunting through random social media links or spam emails.
+### The Two-Sided Onboarding Journey
 
-### 3. Active Event Announcements & 1-Click Registration
-- Clubs actively publish upcoming hackathons, workshops, guest lectures, and cultural fests directly to a centralized feed.
-- Students can register for events with a single click, eliminating reliance on messy Google Forms and lost confirmation emails.
+```
+┌──────────────────────────────────────┐        ┌──────────────────────────────────────┐
+│            CLUB ONBOARDING           │        │           STUDENT ONBOARDING         │
+├──────────────────────────────────────┤        ├──────────────────────────────────────┤
+│ 1. Create Verified Club Account      │        │ 1. Create Student Account            │
+│ 2. Pre-Upload Club Profile:          │        │ 2. Take "Sorting Hat" Quiz:          │
+│    • Domain & Focus Areas            │        │    • Passions & Creative Interests   │
+│    • Detailed Club Description       │        │    • Work Style & Availability       │
+│    • Meeting Cadence & Commitment    │        │ 3. Match Engine Evaluates Vectors:   │
+│ 3. Trait Inferencer Converts Text    │───────►│    • Compares Responses with Club    │
+│    into Numerical Trait Vectors      │        │      Trait Vectors Generated Above   │
+│ 4. Club Unlocks Dashboard:           │        │ 4. Student Receives Top Matches:     │
+│    • Post Recruitment & Openings     │        │    • Ranked Recommendations + Fits   │
+│    • Publish 1-Click Events          │        │ 5. Student Unlocks Dashboard:        │
+│    • Review Applicant Pipelines      │        │    • 1-Click Event Registrations     │
+│                                      │        │    • Centralized Application Tracker │
+└──────────────────────────────────────┘        └──────────────────────────────────────┘
+```
 
-### 4. Student Accounts & Centralized Application Tracker
-- With dedicated student accounts, students can easily track the status of all their club applications (submitted, under review, interview scheduled, accepted) in one dashboard.
-- Students can save, bookmark, and maintain a personal notebook of announcements and deadlines from the clubs they follow.
+#### 1. What Happens When a Club Joins (Club Onboarding)
+- **Account Registration:** Club leadership creates an authenticated Club Account.
+- **Profile & Data Pre-Upload:** The club pre-uploads its verified profile, including technical/cultural domains, executive contacts, meeting schedules, weekly time commitment, past projects, and recruitment prerequisites.
+- **How Club Descriptions Power the Algorithm:** The text description, mission statement, and domain tags provided by the club are processed by Sortling's trait inference engine. The engine maps these descriptions into calibrated numerical **Club Trait Vectors** (e.g., `software`, `hardware`, `design_media`, `public_speaking`, commitment level). The richer and more descriptive a club's profile is, the more accurately the recommendation engine can route high-affinity students to that club.
+- **Club Management Dashboard:** Once onboarded, clubs gain full administrative control to publish active recruitment notices, broadcast upcoming events, and manage their applicant pipeline directly without sending mass email blasts.
 
-### 5. Zero-Maintenance Operational Strategy (Plan A & Plan B)
-To ensure the platform never suffers from the manual maintenance fatigue encountered during our initial prototype, Sortling incorporates a dual-tier operational architecture:
+#### 2. What Happens When a Student Joins (Student Onboarding)
+- **Account Registration:** The student creates a personalized Student Account.
+- **The "Sorting Hat" Questionnaire:** The student enters an interactive questionnaire that asks adaptive questions about their passions, technical skills, creative interests, and weekly availability.
+- **Dynamic Decision-Tree Matching:** Using Shannon entropy and information gain, the algorithm dynamically compares the student's answers against the pre-indexed **Club Trait Vectors** created during club onboarding.
+- **Tailored Recommendations:** The student instantly receives their top-3 matched clubs with natural language "Why you fit" rationales, removing choice paralysis.
+- **Student Dashboard & Application Tracker:**
+  - **1-Click Event Registration:** Students can RSVP and register for hackathons and workshops directly without third-party forms.
+  - **Application Tracker:** Students track the real-time status of all their club applications (applied, shortlisted, interview scheduled, accepted) in one centralized hub.
+  - **Custom Notification Feed:** Students maintain a persistent feed of announcements from clubs they follow.
+
+---
+
+### Zero-Maintenance Operational Strategy (Plan A & Plan B)
+
+To guarantee that the platform remains completely self-sustaining without the manual data-entry fatigue experienced in our initial prototype, Sortling operates with a dual-tier strategy:
 
 ```
                           ┌──────────────────────────────────────────────┐
@@ -65,12 +91,15 @@ To ensure the platform never suffers from the manual maintenance fatigue encount
 ```
 
 - **Plan A (Collaborative Two-Sided Ecosystem):**
-  If clubs are convinced, they join as official **Club Accounts**. In this model, clubs have complete self-service control over what they post, updating application processes, publishing event deadlines, and reviewing applicant pipelines directly.
+  If clubs are convinced, they join as official **Club Accounts** through the onboarding flow detailed above. Clubs have complete autonomy over what they post, updating application processes, publishing event deadlines, and reviewing applicant pipelines directly.
 - **Plan B (Autonomous AI Ingestion Fallback):**
-  If clubs are slow or hesitant to adopt a new portal, an **Autonomous AI Agent** monitors incoming club broadcast emails and campus circulars, extracting dates, eligibility, and descriptions to feed the club database engine automatically. Interest matching and student application tracking still operate flawlessly.
+  If clubs are slow or hesitant to adopt a new portal, an **Autonomous AI Agent** monitors incoming club broadcast emails and campus circulars. The agent automatically extracts dates, eligibility, and descriptions, feeds them through the trait inferencer, and populates the database engine autonomously. Interest matching and student application tracking still operate flawlessly.
 - **Outcome:** Either way, the platform remains self-sustaining with **zero manual data-entry burden**.
 
-### 6. The Tested Proof-of-Concept (Discord Prototype)
+---
+
+### The Tested Proof-of-Concept (Discord Prototype)
+
 Before designing the full web architecture, we built and battle-tested our core matching algorithms live on the **Mahindra University Discord server**:
 - **Adaptive Matching Engine (`/sort`):** Verified multi-step interactive matching evaluating student traits against campus clubs.
 - **Campus Directory (`/clubs`):** Searchable, paginated directory pre-loaded with 50+ verified Mahindra University organizations (including Enigma, Roboverse, Econova, and Lincoln Labs).
