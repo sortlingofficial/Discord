@@ -27,9 +27,26 @@ To scale, the platform needed to evolve beyond a bot into a centralized web plat
 
 ## Solution
 
-Sortling Web transitions the tested recommendation engine into a zero-maintenance web ecosystem with two distinct operational strategies:
+**Sortling** is a single, unified campus platform designed to connect students and clubs seamlessly. It replaces chaotic email chains and scattered forms with an intelligent, all-in-one ecosystem:
 
-### Two-Sided Platform & The Zero-Burden Strategy
+### 1. Interactive "Sorting Hat" Recommendation Engine
+- Acts as a digital sorting hat: prompts students with adaptive questions about their passions, interests, skills, and time availability.
+- Evaluates student responses dynamically against a mathematical decision-tree model and vector-trait scoring to recommend the most suitable clubs with personalized fit explanations.
+
+### 2. Pre-Uploaded & Verified Club Profiles
+- Club departments pre-upload comprehensive profiles with verified information: domain specializations, executive leadership contacts, meeting schedules, past project portfolios, and recruitment criteria.
+- Students can browse, filter, and inspect verified clubs in seconds instead of hunting through random social media links or spam emails.
+
+### 3. Active Event Announcements & 1-Click Registration
+- Clubs actively publish upcoming hackathons, workshops, guest lectures, and cultural fests directly to a centralized feed.
+- Students can register for events with a single click, eliminating reliance on messy Google Forms and lost confirmation emails.
+
+### 4. Student Accounts & Centralized Application Tracker
+- With dedicated student accounts, students can easily track the status of all their club applications (submitted, under review, interview scheduled, accepted) in one dashboard.
+- Students can save, bookmark, and maintain a personal notebook of announcements and deadlines from the clubs they follow.
+
+### 5. Zero-Maintenance Operational Strategy (Plan A & Plan B)
+To ensure the platform never suffers from the manual maintenance fatigue encountered during our initial prototype, Sortling incorporates a dual-tier operational architecture:
 
 ```
                           ┌──────────────────────────────────────────────┐
@@ -47,20 +64,19 @@ Sortling Web transitions the tested recommendation engine into a zero-maintenanc
                                  Zero Manual Maintenance
 ```
 
-- **Plan A (Official Club Onboarding):**
-  If clubs join the platform, Sortling operates as a two-sided platform with **Student Accounts** and **Club Accounts**. Club executives have total self-service control to publish verified announcements, update deadlines, launch 1-click registrations, and review applicant pipelines.
+- **Plan A (Collaborative Two-Sided Ecosystem):**
+  If clubs are convinced, they join as official **Club Accounts**. In this model, clubs have complete self-service control over what they post, updating application processes, publishing event deadlines, and reviewing applicant pipelines directly.
 - **Plan B (Autonomous AI Ingestion Fallback):**
-  If clubs are slow to onboard, an **AI Agent monitors and parses incoming club broadcast emails** and campus circulars automatically. The agent extracts event dates, eligibility, and descriptions to feed the database engine autonomously. Students still get full access to the recommendation engine, club profiles, and event hub.
-- **Outcome:** Either way, the platform remains 100% self-sustaining with **zero manual data-entry burden**.
+  If clubs are slow or hesitant to adopt a new portal, an **Autonomous AI Agent** monitors incoming club broadcast emails and campus circulars, extracting dates, eligibility, and descriptions to feed the club database engine automatically. Interest matching and student application tracking still operate flawlessly.
+- **Outcome:** Either way, the platform remains self-sustaining with **zero manual data-entry burden**.
 
-### The Tested Proof-of-Concept (Discord Prototype)
-
-Before designing the web architecture, we built and battle-tested our core matching algorithms live on the **Mahindra University Discord server**:
-- **Adaptive Matching Engine (`/sort`):** An interactive "Sorting Hat" evaluating student responses through an information-gain decision tree to output top-3 club recommendations with personalized fit explanations.
+### 6. The Tested Proof-of-Concept (Discord Prototype)
+Before designing the full web architecture, we built and battle-tested our core matching algorithms live on the **Mahindra University Discord server**:
+- **Adaptive Matching Engine (`/sort`):** Verified multi-step interactive matching evaluating student traits against campus clubs.
 - **Campus Directory (`/clubs`):** Searchable, paginated directory pre-loaded with 50+ verified Mahindra University organizations (including Enigma, Roboverse, Econova, and Lincoln Labs).
 - **Event Registry (`/event`):** Live competition listings (e.g., Smart India Hackathon 2026) with prizes, timelines, and registration details.
 - **Live Self-Training Engine:** An online gradient reinforcement loop (`TrainingService`) where student corrections via *"Am I wrong?"* dynamically recalibrate club trait vectors in real time.
-- **Pre-Built REST API:** The prototype already hosts a Python REST API (`sorts/web/api.py`) exposing endpoints (`/api/university`, `/api/clubs`, `/api/sessions`) ready for the web frontend.
+- **Pre-Built REST API:** The prototype already hosts a Python REST API (`sorts/web/api.py`) exposing endpoints (`/api/university`, `/api/clubs`, `/api/sessions`) ready to power the web frontend.
 
 ## Technologies used
 
