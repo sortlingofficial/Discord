@@ -8,8 +8,12 @@
 
 ### Members
 
-- Arjun Rajindra — [@ArjunRajindra](https://github.com/ArjunRajindra)
-- Sujay Sudhir — [@keepsloading](https://github.com/keepsloading)
+- Arjun Rajindra: [@ArjunRajindra](https://github.com/ArjunRajindra)
+- Sujay Sudhir: [@keepsloading](https://github.com/keepsloading)
+
+### Team Roles & Journey
+- **Sujay Sudhir:** Initially conceived, developed, and deployed the Discord bot prototype and core recommendation engine on the Mahindra University Discord server.
+- **Arjun Rajindra:** Joined later to help expand and architect the broader web platform vision. Together, Arjun and Sujay are co-designing, building, and preparing to launch the full Sortling website.
 
 ---
 
@@ -18,7 +22,7 @@
 Extracurricular life at universities suffers from severe discovery paralysis and communication breakdown:
 
 1. **Inbox Clutter & Alert Fatigue:** Student inboxes are overwhelmed by endless promotional emails from campus clubs. Because critical course notices get buried under club spam, students develop email fatigue and hesitate to open university mail altogether, missing both vital academic announcements and club recruitments.
-2. **Choice Paralysis for Students:** Navigating 50+ clubs across tech, cultural, and sports domains is intimidating—especially for freshers who don't know where their skills, availability, and passions best align.
+2. **Choice Paralysis for Students:** Navigating 50+ clubs across tech, cultural, and sports domains is intimidating; especially for freshers who do not know where their skills, availability, and passions best align.
 3. **The Real-World Bottleneck (Lessons from our Discord Prototype):** We deployed a Sortling prototype directly inside the **Mahindra University Discord server**. Students actively used the bot for recommendations, but maintaining the registry manually (updating events, revising club rosters, tracking dates) quickly became exhausting and unsustainable for a small team.
 
 To scale, the platform needed to evolve beyond a bot into a centralized web platform that completely eliminates manual maintenance overhead.
