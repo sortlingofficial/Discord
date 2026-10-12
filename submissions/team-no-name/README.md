@@ -15,8 +15,6 @@
 - **Sujay Sudhir:** Initially conceived, developed, and deployed the Discord bot prototype and core recommendation engine on the Mahindra University Discord server.
 - **Arjun Rajindra:** Joined later to help expand and architect the broader web platform vision. Together, Arjun and Sujay are co-designing, building, and preparing to launch the full Sortling website.
 
----
-
 ## Problem
 
 Extracurricular life at universities suffers from severe discovery paralysis and communication breakdown:
@@ -27,9 +25,7 @@ Extracurricular life at universities suffers from severe discovery paralysis and
 
 To scale, the platform needed to evolve beyond a bot into a centralized web platform that completely eliminates manual maintenance overhead.
 
----
-
-## Solution: The Scaled Web Platform
+## Solution
 
 Sortling Web transitions the tested recommendation engine into a zero-maintenance web ecosystem with two distinct operational strategies:
 
@@ -57,9 +53,7 @@ Sortling Web transitions the tested recommendation engine into a zero-maintenanc
   If clubs are slow to onboard, an **AI Agent monitors and parses incoming club broadcast emails** and campus circulars automatically. The agent extracts event dates, eligibility, and descriptions to feed the database engine autonomously. Students still get full access to the recommendation engine, club profiles, and event hub.
 - **Outcome:** Either way, the platform remains 100% self-sustaining with **zero manual data-entry burden**.
 
----
-
-## The Tested Proof-of-Concept (Discord Prototype)
+### The Tested Proof-of-Concept (Discord Prototype)
 
 Before designing the web architecture, we built and battle-tested our core matching algorithms live on the **Mahindra University Discord server**:
 - **Adaptive Matching Engine (`/sort`):** An interactive "Sorting Hat" evaluating student responses through an information-gain decision tree to output top-3 club recommendations with personalized fit explanations.
@@ -67,22 +61,6 @@ Before designing the web architecture, we built and battle-tested our core match
 - **Event Registry (`/event`):** Live competition listings (e.g., Smart India Hackathon 2026) with prizes, timelines, and registration details.
 - **Live Self-Training Engine:** An online gradient reinforcement loop (`TrainingService`) where student corrections via *"Am I wrong?"* dynamically recalibrate club trait vectors in real time.
 - **Pre-Built REST API:** The prototype already hosts a Python REST API (`sorts/web/api.py`) exposing endpoints (`/api/university`, `/api/clubs`, `/api/sessions`) ready for the web frontend.
-
----
-
-## Proof-of-Concept Screenshots (Tested at Mahindra University)
-
-| 1. Verified Club Directory (`/clubs`) | 2. Adaptive Match Results (`/sort`) |
-| :---: | :---: |
-| ![Club Directory](screenshots/01-club-directory.png) | ![Matching Results](screenshots/02-sorting-matches.png) |
-| *Browsing Mahindra University clubs with pagination* | *Decision-tree matches with tailored "Why you fit" rationales* |
-
-| 3. Engine Overview & Architecture (`/about`) | 4. Live Event Hub & Registration (`/event`) |
-| :---: | :---: |
-| ![About Engine](screenshots/03-engine-overview.png) | ![Event Hub](screenshots/04-event-announcement.png) |
-| *Campus discovery engine explanation and command guide* | *SIH 2026 event details, prizes, dates, and registration* |
-
----
 
 ## Technologies used
 
@@ -93,9 +71,7 @@ Before designing the web architecture, we built and battle-tested our core match
 - **Data Validation & Parsing:** Pydantic v2, BeautifulSoup4
 - **Hosting & Monitoring:** Render cloud web service
 
----
-
-## How to run (Proof-of-Concept Prototype)
+## How to run
 
 ### 1. Setup Environment
 
@@ -126,9 +102,24 @@ python3 -m sorts.cli interactive --university-slug mahindra
 python3 main.py
 ```
 
----
+## Demo
 
-## Notes & Future Roadmap
+- **Repository Link:** [https://github.com/sortlingofficial/Discord](https://github.com/sortlingofficial/Discord)
+- **Live Cloud Service:** [https://sortling-bot.onrender.com](https://sortling-bot.onrender.com)
+
+### Proof-of-Concept Screenshots (Tested at Mahindra University)
+
+| 1. Verified Club Directory (`/clubs`) | 2. Adaptive Match Results (`/sort`) |
+| :---: | :---: |
+| ![Club Directory](screenshots/01-club-directory.png) | ![Matching Results](screenshots/02-sorting-matches.png) |
+| *Browsing Mahindra University clubs with pagination* | *Decision-tree matches with tailored "Why you fit" rationales* |
+
+| 3. Engine Overview & Architecture (`/about`) | 4. Live Event Hub & Registration (`/event`) |
+| :---: | :---: |
+| ![About Engine](screenshots/03-engine-overview.png) | ![Event Hub](screenshots/04-event-announcement.png) |
+| *Campus discovery engine explanation and command guide* | *SIH 2026 event details, prizes, dates, and registration* |
+
+## Notes
 
 - **From Bot to Web App:** Porting the vector engine into a full-stack web application with dedicated student portals and club officer dashboards.
 - **Autonomous Inbox Agent Deployment:** Finalizing the automated email parsing agent for universities relying on legacy mail blasts.
